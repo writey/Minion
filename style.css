@@ -34,18 +34,19 @@ div {
   float: left;
   position: absolute;
   z-index: -1;
+  animation: hair 5s infinite;
 }
 
 .xhr-hair-1 {
   top: 78px;
   left: 105px;
-  transform: rotate(40deg);
+  transform: rotate(45deg);
 }
 
 .xhr-hair-2 {
-  top: 65px;
-  left: 105px;
-  transform: rotate(50deg);
+  top: 68px;
+  left: 107px;
+  transform: rotate(45deg);
 }
 
 .xhr-hand-l,
@@ -141,8 +142,17 @@ div {
   border: 5px solid #000;
   border-radius: 50%;
   background: black;
-  margin: 50% 0 0 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 30px;
+  animation: blackeyes 5s infinite;
+}
+
+.xhr-eyes-black-l {
+  left: 50px;
+}
+
+.xhr-eyes-black-r {
+  right: 50px;
 }
 
 .xhr-eyes-white-l,
@@ -153,6 +163,7 @@ div {
   border-radius: 50%;
   position: absolute;
   top: 10px;
+  animation: whiteeyes 5s infinite;
 }
 
 .xhr-eyes-white-l {
@@ -296,4 +307,49 @@ div {
 .xhr-thoustres-t-l::after {
   bottom: 2.5px;
   right: 1px;
+}
+
+@keyframes hair {
+  0%,
+  50%,
+  100% {
+    transform: rotate(45deg);
+  }
+
+  20%,
+  80% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes blackeyes {
+  0%,
+  50%,
+  100% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-20px);
+  }
+
+  80% {
+    transform: translate(20px);
+  }
+}
+
+@keyframes whiteeyes {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(4px);
+  }
+
+  80% {
+    transform: translateY(4px);
+  }
 }
